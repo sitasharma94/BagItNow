@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Cart - BagItNow</title>
+  <link rel="stylesheet" href="cart.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li style="color: crimson">BagItNow</li>
+        <li><a href="shop.html#home">Home</a></li>
+        <li><a href="shop.html#shop">Shop</a></li>
+        <li><a href="shop.html#contact">Contact</a></li>
+        <li><a href="cart.html">Cart</a></li>
+        <li><a href="sign.html">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="cart">
+  <h2>Your Shopping Cart</h2>
+  <ul id="cart-items"></ul>
+</section>
+
+<div id="cart-summary">
+  <h2>Cart Summary</h2>
+
+
+  <div class="cart-total">
+    <span id="cart-total">₹ 0</span>
+  </div>
+</div>
+
+<button id="proceed-btn" class="proceed-btn">Proceed to Payment</button>
+ <script src="cart.js"></script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #664343;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.side-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+}
+
+.sign-up {
+    margin-left: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color:#FFF0D1;
+}
+
+.sign-up h1 {
+    font-size: 10dvh;
+    margin-bottom: 30px;
+    margin-top: 1%;
+}
+
+.sign-up h3 {
+    font-size: 5dvh;
+    margin-bottom: 10%;
+}
+
+.sign-up p {
+    font-size: 4dvh;
+    margin-bottom: 2%;
+}
+
+.sign-up input[type="text"],
+.sign-up input[type="password"] {
+    width: 30vw;
+    height: 5vh;
+    border-radius: 50px;
+    border: 1px solid #FFF0D1;
+    padding-left: 2%;
+    font-size: 3dvh;
+    margin-bottom: 1%;
+}
+
+.sign-up button {
+    height: 8vh;
+    width: 20vw;
+    border-radius: 50px;
+    background-color: #FFF0D1;
+    margin-top: 30px;
+    margin-left: 10vh;
+    font-size: larger;
+    color: #664343;
+    border-color: black;
+}
+
+.sign-up .sign-in-btn {
+    margin-top: 10px;
+}
+
+.sign-up #or {
+    margin-left: 13.5vw;
+}
+@media screen and (max-width: 768px){
+    .main{
+        grid-template-columns: 1fr;
+    }
+    .sign-up{
+        text-align: center;
+        padding: 5vh 10vw;
+        margin-left: 0;
+    }
+
+}
+
+@media screen and (max-width: 480px){
+    .sign-up h1{
+        font-size: 8dvh;
+    }
+    .sign-up h3{
+        font-size: 4dvh;
+    }
+    .sign-up p{
+        font-size: 3dvh;
+    }
+    .sign-up input[type="text"],
+    .sign-up input[type="password"]{
+        width: 80vw;
+        height: 5vh;
+        font-size: 3dvh;
+    }
+    .sign-up button{
+        width: 60vw;
+        height: 8vh;
+        font-size: 3dvh;
+        margin-left: 9vw;
+
+    }
+    .sign-up .sign-in-btn{
+        font-size: 3dvh;
+    }
+    .sign-up #or{
+        font-size: 3dvh;
+    }
+}

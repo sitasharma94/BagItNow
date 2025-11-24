@@ -1,0 +1,150 @@
+nav {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+  }
+  
+  ul {
+    list-style-type: none;
+  }
+  
+  li {
+    display: inline;
+    margin-right: 20vh;
+    font-size: 28px;
+  }
+  a {
+    color: tan;
+    text-decoration: none;
+    font-size: 25px;
+  }
+  a:hover {
+    color: #fff;
+    text-decoration: underline;
+  }
+  li:hover {
+    color: #000000;
+    cursor: pointer;
+  }
+
+
+.cart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 10px;
+  }
+  
+  .cart h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+  }
+  
+  #cart-items {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    max-width: 900px;
+  }
+  
+  #cart-items li {
+    background-color: #fff;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  #cart-items img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 20px;
+  }
+  
+  .item-details {
+    flex: 1; /* push button to the end */
+  }
+  
+  .item-details h3 {
+    margin: 0 0 10px;
+  }
+  
+  .item-details p {
+    margin: 0;
+    color: #777;
+  }
+  
+.remove-btn {
+  background: crimson;
+  color: white;
+  padding: 8px 18px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.remove-btn:hover {
+  background-color: #b71c1c;
+}
+
+  
+  .cart p {
+    font-size: 1.2rem;
+    margin-top: 20px;
+    font-weight: bold;
+   text-align: center;
+  }
+  #cart-summary {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background: #fafafa;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  font-family: Arial, sans-serif;
+}
+
+#cart-summary h2 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.cart-total {
+  margin-top: 15px;
+  padding-top: 10px;
+  border-top: 1px solid #ccc;
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.proceed-btn {
+  display: block;
+  margin: 30px auto;
+  background-color: crimson;
+  color: white;
+  padding: 15px 40px;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.proceed-btn:hover {
+  background-color: #b71c1c;
+}

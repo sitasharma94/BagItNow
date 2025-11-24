@@ -1,0 +1,118 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    background-color: bisque;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.cover-image
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.main
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+}
+.sign-in h1
+{
+    font-size: 10dvh;
+    color: brown;
+    margin-bottom: 30px;
+    margin-top: 1%;
+}
+.sign-in
+{
+margin-left: 30vh;
+}
+.sign-in p
+{
+    font-size: 4dvh;
+    color: brown;
+    margin-bottom: 2%;
+
+}
+.sign-in h3
+{
+    font-size: 5dvh;
+    color: brown;
+    margin-bottom: 15%;
+}
+.sign-in input[type="text"],
+.sign-in input[type="password"] {
+    width: 30vw;
+    height: 5vh;
+    border-radius: 50px;
+    border: 1px solid brown;
+    padding-left: 2%;
+    font-size: 3dvh;
+    margin-bottom: 1%;
+}
+.sign-in button
+{
+    height: 6vh;
+    width: 20vw;
+    border-radius:50px;
+    background-color: brown;
+    margin-top: 30px;
+    margin-left: 10vh;
+    font-size: larger;
+    color: bisque;
+    border-color: black;
+}
+
+ .sign-in .sign-up
+{
+    margin-top: 10px;
+}
+
+.sign-in #or
+{
+    margin-left: 13.5vw;
+}
+
+@media screen and (max-width: 768px) {
+    .main {
+      grid-template-columns: 1fr;
+    }
+  
+    .sign-in {
+      text-align: center;
+      padding: 5vh 10vw;
+      margin-left: 0;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .sign-in h1 {
+      font-size: 6vh;
+    }
+  
+    .sign-in h3 {
+      font-size: 3.5vh;
+    }
+  
+    .sign-in p {
+      font-size: 2.5vh;
+    }
+  
+    .sign-in input[type="text"],
+    .sign-in input[type="password"] {
+      width: 80vw;
+      font-size: 2vh;
+    }
+  
+    .sign-in button {
+      width: 60vw;
+      font-size: 2vh;
+      margin-left: 0;
+    }
+  
+    .sign-in #or {
+      text-align: center;
+    }
+  }

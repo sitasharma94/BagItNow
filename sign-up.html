@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-Up</title>
+    <link rel="stylesheet" href="sign-up.css">
+</head>
+<body>
+    <div class="main">
+
+        <section class="image-section">
+            <img src="image/sign-up-cover.jpg" alt="side image" class="side-img">
+        </section>
+
+        <section class="sign-up">
+            <h1>BagItNow</h1>
+            <h3>Create Your Account</h3>
+
+            <p>Full Name</p>
+            <input id="fullName" type="text" placeholder="Enter your full name" required>
+
+            <p>Email/Username</p>
+            <input id="email" type="text" placeholder="Enter your email or username" required>
+
+            <p>Password</p>
+            <input id="password" type="password" placeholder="Create a password" required>
+
+            <p>Confirm Password</p>
+            <input id="confirmPassword" type="password" placeholder="Confirm your password" required>
+
+            <button id="signupBtn" type="submit">Sign Up</button>
+
+            <button class="sign-in-btn" onclick="window.location.href='login.html'">Already have an account? Log In</button>
+        </section>
+
+    </div>
+
+    <script src="sign-up.js"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<script>
+  const productData = {
+    wedges: { name: "Wedges", price: 19.99, image: "image/heels.jpg" },
+    handbag: { name: "Hand Bag", price: 29.99, image: "image/handbags.jpg" },
+    headphones: { name: "Head Phones", price: 69.99, image: "image/headphones.jpg" },
+    jacket: { name: "Jacket", price: 49.99, image: "image/jacket.jpg" },
+    lipgloss: { name: "Lip Gloss", price: 39.99, image: "image/lipgloss.jpg" },
+    men_watch: { name: "Men's Watch", price: 39.99, image: "image/men_watch.jpg" },
+    watch: { name: "Watch", price: 89.99, image: "image/women_watch.jpg" },
+    casual_wear: { name: "Casual Wear", price: 19.99, image: "image/casual_wear.jpg" },
+    formal_wear: { name: "Formal Wear", price: 29.99, image: "image/Formal_wear.jpg" },
+    sneakers: { name: "Sneakers", price: 49.99, image: "image/sneakers.jpg" },
+    lotion: { name: "Lotion", price: 39.99, image: "image/lotion.jpg" },
+    lipstick: { name: "Lipstick", price: 79.99, image: "image/lipstick.jpg" },
+    chain: { name: "Chain", price: 299.99, image: "image/chain.jpg" },
+    earrings: { name: "Earrings", price: 199.99, image: "image/earring.jpg" },
+    perfume: { name: "Perfume", price: 149.99, image: "image/perfume.jpg" },
+    flower_vase: { name: "Flower Vase", price: 99.99, image: "image/flower_vase.jpg" },
+    candle: { name: "Candle", price: 29.99, image: "image/candle.jpg" },
+    ring: { name: "Ring", price: 19.99, image: "image/ring.jpg" },
+    china: { name: "China", price: 9.99, image: "image/china.jpg" },
+    sunglass: { name: "Sunglass", price: 19.99, image: "image/sunglass.jpg" },
+  };
+
+  const backend = "http://localhost:5000"; // change if needed
+
+  document.addEventListener("DOMContentLoaded", async () => {
+    const email =
+      localStorage.getItem("userEmail") || sessionStorage.getItem("userEmail");
+    const container = document.getElementById("wishlist-grid");
+
+    if (!email) {
+      container.innerHTML =
+        "<p class='empty-msg'>Login to see your wishlist.</p>";
+      return;
+    }
+
+    try {
+      const res = await fetch(
+        `${backend}/api/wishlist?email=${encodeURIComponent(email)}`
+      );
+      if (!res.ok) {
+        container.innerHTML =
+          "<p class='empty-msg'>Could not load wishlist.</p>";
+        return;
+      }
+
+      const data = await res.json();
+      const wishlist = data.wishlist || [];
+
+      if (!wishlist.length) {
+        container.innerHTML =
+          "<p class='empty-msg'>Your wishlist is empty.</p>";
+        return;
+      }
+
+      wishlist.forEach((id) => {
+        const item = productData[id];
+        if (!item) return;
+
+        const div = document.createElement("div");
+        div.className = "product";
+        div.innerHTML = `
+          <button class="wishlist-btn" data-id="${id}">❤️</button>
+          <img src="${item.image}" alt="${item.name}" class="product-image" />
+          <h3>${item.name}</h3>
+          <p>$${item.price}</p>
+          <button class="add-to-cart">Add to Cart</button>
+        `;
+        container.appendChild(div);
+      });
+    } catch (err) {
+      console.error("Error loading wishlist page:", err);
+      container.innerHTML =
+        "<p class='empty-msg'>Something broke while loading wishlist.</p>";
+    }
+  });
+</script>

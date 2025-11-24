@@ -1,0 +1,292 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+nav {
+  background-color: #333;
+  padding: 15px;
+  width: 100%;
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+  margin: 0;
+}
+
+nav ul li.logo {
+  font-size: 28px;
+  color: rgb(186, 30, 61);
+  font-weight: bold;
+}
+
+nav ul li input#search-input {
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid tan;
+  background-color: tan;
+  width: 180px;
+}
+
+a {
+  color: tan;
+  text-decoration: none;
+  font-size: 25px;
+}
+
+a:hover,
+li:hover {
+  color: #fff;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* HERO SECTION */
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100px;
+}
+.hero h1 {
+  font-size: 50px;
+  color: #333;
+  margin-bottom: 10px;
+}
+.hero p {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 20px;
+}
+.hero button {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.hero button:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+/* PRODUCTS */
+.product-image {
+  width: 19.5vw;
+  height: 30vw;
+  border: 1px solid #ccc;
+  border-radius: 3%;
+}
+.product-image:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+.product-grid-1,
+.product-grid-2,
+.product-grid-3,
+.product-grid-4 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  margin-bottom: 8%;
+}
+
+.product h3 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+.product p {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 20px;
+}
+.product button {
+  background-color: #333;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 13px;
+  cursor: pointer;
+}
+.product button:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+.products h2 {
+  font-size: 40px;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Wishlist layout only */
+.wishlist-page {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.wishlist-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+/* Wishlist cards only */
+.wishlist-grid .product {
+  position: relative;
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.wishlist-grid .product-image {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
+
+/* Wishlist hearts only */
+.wishlist-grid .wishlist-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: #ffffff;
+  border: none;
+  padding: 5px 8px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
+  z-index: 5;
+}
+
+.wishlist-grid .wishlist-btn.active {
+  color: red;
+  background: #ffe6e6;
+}
+
+/* ABOUT */
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0 100px;
+  background-color: #f9f9f9;
+}
+.about h3 {
+  font-size: 30px;
+  color: #333;
+  margin-bottom: 20px;
+}
+.about p,
+.about blockquote {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* FOOTER */
+footer {
+  background-color: #333;
+  padding: 20px;
+  color: white;
+  text-align: center;
+  margin-top: 100px;
+}
+footer p {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+footer a {
+  color: tan;
+  text-decoration: none;
+  font-size: 25px;
+}
+footer a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 1024px) {
+  nav ul li {
+    font-size: 1.5rem;
+  }
+  .product-image {
+    width: 28%;
+    height: auto;
+  }
+  .product-grid-1,
+  .product-grid-2,
+  .product-grid-3,
+  .product-grid-4 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  .hero p {
+    font-size: 1.25rem;
+  }
+  .products button {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+  nav ul li {
+    font-size: 1.2rem;
+  }
+  .product-image {
+    width: 90%;
+    height: auto;
+  }
+  .product-grid-1,
+  .product-grid-2,
+  .product-grid-3,
+  .product-grid-4 {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero p,
+  .about p,
+  .about blockquote {
+    font-size: 1rem;
+  }
+  footer p,
+  footer a {
+    font-size: 1.2rem;
+  }
+  .products button {
+    font-size: 1rem;
+  }
+}

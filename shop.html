@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping-Website</title>
+    <link rel="stylesheet" href="index.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li class="logo">BagItNow</li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#shop">Shop</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="cart.html">Cart</a></li>
+          <li><a href="sign.html">Login</a></li>
+          <li><a href="wishlist.html">Wishlist</a></li>
+          <li><input type="text" id="search-input" placeholder="Search products" /></li>
+        </ul>
+      </nav>
+      <div id="search-results"></div>
+    </header>
+
+    <section class="hero" id="home">
+      <h1>Welcome to BagItNow</h1>
+      <p>Your one-stop shop for all your needs!</p>
+      <button>Shop Now</button>
+    </section>
+
+    <section class="products" id="shop">
+      <h2>Featured Products</h2>
+      <div class="product-grid">
+        <!-- Product Grid 1 -->
+        <div class="product-grid-1">
+          <div class="product">
+            <button class="wishlist-btn" data-id="wedges">❤️</button>
+            <img src="image/heels.jpg" alt="Wedges" class="product-image" />
+            <h3>Wedges</h3>
+            <p>$19.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+          <div class="product">
+            <button class="wishlist-btn" data-id="handbag">❤️</button>
+            <img src="image/handbags.jpg" alt="Hand Bag" class="product-image" />
+            <h3>Hand Bag</h3>
+            <p>$29.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+          <div class="product">
+            <button class="wishlist-btn" data-id="headphones">❤️</button>
+            <img src="image/headphones.jpg" alt="Head Phones" class="product-image" />
+            <h3>Head Phones</h3>
+            <p>$69.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+          <div class="product">
+            <button class="wishlist-btn" data-id="jacket">❤️</button>
+            <img src="image/jacket.jpg" alt="Jacket" class="product-image" />
+            <h3>Jacket</h3>
+            <p>$49.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+          <div class="product">
+            <button class="wishlist-btn" data-id="lipgloss">❤️</button>
+            <img src="image/lipgloss.jpg" alt="Lip Gloss" class="product-image" />
+            <h3>Lip Gloss</h3>
+            <p>$39.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+
+        <!-- Product Grid 2 -->
+        <div class="product-grid-2">
+          <div class="product">
+            <button class="wishlist-btn" data-id="men_watch">❤️</button>
+            <img src="image/men_watch.jpg" alt="Men's Watch" class="product-image" />
+            <h3>Men's Watch</h3>
+            <p>$39.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+          <div class="product">
+            <button class="wishlist-btn" data-id="watch">❤️</button>
+            <img src="image/women_watch.jpg" alt="Watch" class="product-image" />
+            <h3>Watch</h3>
+            <p>$89.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+          <div class="product">
+            <button class="wishlist-btn" data-id="casual_wear">❤️</button>
+            <img src="image/casual_wear.jpg" alt="Casual Wear" class="product-image" />
+            <h3>Casual Wear</h3>
+            <p>$19.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+          <div class="product">
+            <button class="wishlist-btn" data-id="formal_wear">❤️</button>
+            <img src="image/Formal_wear.jpg" alt="Formal Wear" class="product-image" />
+            <h3>Formal Wear</h3>
+            <p>$29.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+          <div class="product">
+            <button class="wishlist-btn" data-id="sneakers">❤️</button>
+            <img src="image/sneakers.jpg" alt="Sneakers" class="product-image" />
+            <h3>Sneakers</h3>
+            <p>$49.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+
+        <!-- Product Grid 3 -->
+        <div class="product-grid-3">
+          <div class="product">
+            <button class="wishlist-btn" data-id="lotion">❤️</button>
+            <img src="image/lotion.jpg" alt="Lotion" class="product-image" />
+            <h3>Lotion</h3>
+            <p>$39.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+          <div class="product">
+            <button class="wishlist-btn" data-id="lipstick">❤️</button>
+            <img src="image/lipstick.jpg" alt="Lipstick" class="product-image" />
+            <h3>Lipstick</h3>
+            <p>$79.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+          <div class="product">
+            <button class="wishlist-btn" data-id="chain">❤️</button>
+            <img src="image/chain.jpg" alt="Chain" class="product-image" />
+            <h3>Chain</h3>
+            <p>$299.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+          <div class="product">
+            <button class="wishlist-btn" data-id="earrings">❤️</button>
+            <img src="image/earring.jpg" alt="Earrings" class="product-image" />
+            <h3>Earrings</h3>
+            <p>$199.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+          <div class="product">
+            <button class="wishlist-btn" data-id="perfume">❤️</button>
+            <img src="image/perfume.jpg" alt="Perfume" class="product-image" />
+            <h3>Perfume</h3>
+            <p>$149.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+
+        <!-- Product Grid 4 -->
+        <div class="product-grid-4">
+          <div class="product">
+            <button class="wishlist-btn" data-id="flower_vase">❤️</button>
+            <img src="image/flower_vase.jpg" alt="Flower Vase" class="product-image" />
+            <h3>Flower Vase</h3>
+            <p>$99.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+          <div class="product">
+            <button class="wishlist-btn" data-id="candle">❤️</button>
+            <img src="image/candle.jpg" alt="Candle" class="product-image" />
+            <h3>Candle</h3>
+            <p>$29.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+          <div class="product">
+            <button class="wishlist-btn" data-id="ring">❤️</button>
+            <img src="image/ring.jpg" alt="Ring" class="product-image" />
+            <h3>Ring</h3>
+            <p>$19.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+          <div class="product">
+            <button class="wishlist-btn" data-id="china">❤️</button>
+            <img src="image/china.jpg" alt="China" class="product-image" />
+            <h3>China</h3>
+            <p>$9.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+          <div class="product">
+            <button class="wishlist-btn" data-id="sunglass">❤️</button>
+            <img src="image/sunglass.jpg" alt="Sunglass" class="product-image" />
+            <h3>Sunglass</h3>
+            <p>$19.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="contact">
+      <h3>Why Shop With Us?</h3>
+      <p>
+        Thousands of happy customers trust BagItNow for great quality and
+        unbeatable prices.
+      </p>
+      <blockquote>
+        "Amazing service and fast delivery. 5 stars!" – A Happy Customer
+      </blockquote>
+    </section>
+
+    <footer>
+      <p>Contact us: support@bagitnow.com | +91 98765 43210</p>
+      <p>
+        Follow us: <a href="#">Instagram</a> |
+        <a href="#">Facebook</a>
+      </p>
+      <p>&copy; 2025 BagItNow. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
